@@ -12,6 +12,7 @@ export const devInfo: DevInfo = {
 - Node.js
 - Spring
 - Git
+- AWS Lambda
 - Willing to learn more!
 
 I have a professional level of English, I am a native Spanish speaker and I am currently working on improving my French language skills. 
