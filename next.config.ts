@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
     images: {
         remotePatterns: [{
             protocol: 'https',
-            hostname: 'nachokai.github.io'
+            hostname: 'builtin.com',
+        },{
+            protocol: 'https',
+            hostname: 'raw.githubusercontent.com',
         }]
     }
 };

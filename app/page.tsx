@@ -11,21 +11,21 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-[#11111b] p-4">
-      <div className="mb-4">
-        <ToggleButton isProVersion={isProVersion} onToggle={() => setIsProVersion(!isProVersion)} />
-      </div>
       <AnimatePresence mode="wait">
         <motion.div
           key={isProVersion ? 'pro' : 'simple'}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          exit={{opacity: 0, y: -20}}
+          transition={{duration: 0.3}}
           className="w-full max-w-4xl"
         >
-          {isProVersion ? <Terminal /> : <SimplePortfolio />}
+          {isProVersion ? <Terminal/> : <SimplePortfolio/>}
         </motion.div>
       </AnimatePresence>
+      <div className="fixed bottom-0 left-3 z-10 p-7">
+        <ToggleButton isProVersion={isProVersion} onToggle={() => setIsProVersion(!isProVersion)}/>
+      </div>
     </main>
   )
 }

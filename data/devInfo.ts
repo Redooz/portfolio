@@ -1,19 +1,22 @@
 import { DevInfo } from "@/lib/dataFetcher";
 
 export const devInfo: DevInfo = {
-    content: `I'm a passionate backend developer with 5 years of experience in building scalable web applications.
+        content: `Hi! I am an experienced full-stack developer, passionate about creating future-focused solutions. My empathy and ability to connect with others help me thrive in team environments, where I support my colleagues while continuously learning. My adaptability and love for learning drive me to embrace change and seek new knowledge. As a Futuristic thinker, I’m always looking for ways to contribute to what's next. I was honored with a Platzi Scholarship during the 'Future Global Technologists' program and recognized as a Digital Academy Ambassador for Colombia by Blanc Labs, highlighting my commitment to growth and e-learning.
 
-#### Skills
-- Node.js
-- Python
+#### Technical Skills
+- Java
+- TypeScript/JavaScript
 - Go
-- SQL and NoSQL databases
-- Docker and Kubernetes
-- CI/CD
+- Angular
+- SQL
+- Node.js
+- Spring
+- Git
+- Willing to learn more!
 
-#### Experience
-- Senior Backend Developer at TechCorp (2020-present)
-- Backend Developer at StartupX (2018-2020)
+I have a professional level of English, I am a native Spanish speaker and I am currently working on improving my French language skills. 
+
+I am always open to new opportunities and challenges, so feel free to reach out to me!
 
 `,
     info: [

@@ -10,7 +10,7 @@ export function Label({ htmlFor, className, children }: LabelProps) {
     return (
         <label
             htmlFor={htmlFor}
-            className={`text-[#cdd6f4] cursor-pointer select-none ${className}`}
+            className={`text-[#89b4fa] font-semibold cursor-pointer select-none ${className}`}
         >
             {children}
         </label>

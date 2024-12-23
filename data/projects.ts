@@ -7,58 +7,58 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        name: 'Project 1',
-        slug: 'project-1',
-        image: 'https://nachokai.github.io/rpg-cv/img/ifytops.png',
-        content: `# Project 1
+        name: 'Our Hive',
+        slug: 'our-hive',
+        image: 'https://raw.githubusercontent.com/Redooz/personal-project-images/refs/heads/main/Our%20Hive%20Admin%20Panel.png',
+        content: `# Our Hive
+App that allows a user to track their emotions with the purpose of fostering emotional intelligence literacy. Users can share their emotional history with other users.
 
-This is a sample project demonstrating my backend development skills.
+- Microservices developed using Node.js and Go & admin panel's frontend using Angular.
+- Authentication with Guards (Local & JWT)
+- Documentation with Swagger
+- MySQL and Firebase Firestore used as databases.
 
 ## Technologies Used
 - Node.js
-- Express
-- MongoDB
-
-## Features
-- RESTful API
-- Authentication and Authorization
-- Data Validation`
-    },
-    {
-        name: 'Project 2',
-        slug: 'project-2',
-        image: 'https://nachokai.github.io/rpg-cv/img/ifytops.png',
-        content: `# Project 2
-
-Another example project showcasing different backend technologies.
-
-## Technologies Used
-- Python
-- Django
+- Go
+- Angular
 - PostgreSQL
-
-## Features
-- GraphQL API
-- Real-time WebSocket Communication
-- Caching with Redis`
+- Firebase: Firestore & Storage
+- Swagger
+- JWT
+`
     },
     {
-        name: 'Project 3',
-        slug: 'project-3',
-        image: 'https://nachokai.github.io/rpg-cv/img/ifytops.png',
-        content: `# Project 3
-        
-A third project to show my full-stack development skills.
+        name: 'OnClass',
+        slug: 'onclass',
+        image: 'https://raw.githubusercontent.com/Redooz/personal-project-images/refs/heads/main/On%20Class.png',
+        content: `# OnClass
+
+A comprehensive platform for managing bootcamps, designed to streamline the registration process for students, instructors, and courses. The platform includes seamless integration with a curated list of technologies to enhance the learning experience.
+
+- Microservices developed using Java Spring with a hexagonal architecture and frontend built using Angular and atomic design methodology.
+- Design of a scalable and robust architecture to support bootcamp management. 
 
 ## Technologies Used
-- React
-- Node.js
-- MongoDB
+- Java Spring
+- Angular
+- MySQL
 
-## Features
-- Server-side rendering
-- Responsive Design
+## Architectural Patterns
+- Hexagonal Architecture
+- Atomic Design
+`
+    },
+    {
+        name: 'Forward Chaining Inference Engine API',
+        slug: 'forward-chaining-inference-engine-api',
+        image: 'https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_forward-chaining-vs-backward-chaining.png',
+        content: `# Forward Chaining Inference Engine API
 
+Implemented a forward chaining inference engine, designed to facilitate logical reasoning and decision-making processes within a Java Spring API environment. Created an API that can infer outcomes from given data and rules, improving the API's performance and logic. I enhanced the API's functionality by smoothly incorporating a forward chaining inference engine, which enables faster and smarter reasoning and creates a more adaptive system.
+
+## Technologies Used
+- Java Spring
 `
     }
 ]
