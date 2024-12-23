@@ -14,8 +14,9 @@ export const projects: Project[] = [
 App that allows a user to track their emotions with the purpose of fostering emotional intelligence literacy. Users can share their emotional history with other users.
 
 - Microservices developed using Node.js and Go & admin panel's frontend using Angular.
+- Integration of AI Models such as Stable Diffusion and Zero Shot Classification.
 - Authentication with Guards (Local & JWT)
-- Documentation with Swagger
+- Documentation with Swagger.
 - MySQL and Firebase Firestore used as databases.
 
 ## Technologies Used
