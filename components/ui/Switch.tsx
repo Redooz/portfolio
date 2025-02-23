@@ -1,10 +1,10 @@
 import * as React from "react"
 
 interface SwitchProps {
-  id: string
-  checked: boolean
-  onCheckedChange: () => void
-  className?: string
+  readonly id: string
+  readonly checked: boolean
+  readonly onCheckedChange: () => void
+  readonly className?: string
 }
 
 export function Switch({ id, checked, onCheckedChange, className }: SwitchProps) {

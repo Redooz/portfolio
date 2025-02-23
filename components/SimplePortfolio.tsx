@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import { getProjects, getProjectDetails, getDeveloperInfo, getProfessionalExperience, SocialMediaLink } from '@/lib/dataFetcher'
-import { Github, Linkedin, LucideMail } from 'lucide-react'
 import Image from 'next/image'
 import { Project } from "@/data/projects"
 import ReactMarkdown from 'react-markdown'
 import portfolioStyles from '@/styles/SimplePortfolio.module.css'
 import {ProfessionalExperience} from "@/data/experience";
+import { SocialIcon } from './ui/SocialIcon'
 
 export default function SimplePortfolio() {
   const title = "Nicolás Olmos Portfolio"
@@ -45,19 +45,6 @@ export default function SimplePortfolio() {
       detailsRef.current.scrollIntoView({ behavior: 'smooth' })
     }
   }, [projectDetails])
-
-  const SocialIcon = ({ platform }: { platform: string }) => {
-    switch (platform) {
-      case 'github':
-        return <Github className="w-5 h-5" />
-      case 'linkedin':
-        return <Linkedin className="w-5 h-5" />
-      case 'email':
-        return <LucideMail className="w-5 h-5" />
-      default:
-        return null
-    }
-  }
 
   return (
     <div className={`w-full bg-[#1e1e2e] text-[#cdd6f4] p-6 rounded-lg shadow-lg font-mono`}>

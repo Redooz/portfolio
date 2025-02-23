@@ -9,7 +9,7 @@ export const professionalExperience: ProfessionalExperience[] = [
   {
     role: 'Backend Developer',
     company: 'Pragma',
-    duration: '07/2024 - Present',
+    duration: '07/2024 - 01/2025',
     description: 'Developed and implemented a microservices-based architecture using Java and Spring Boot. Maintained applications for salary reviews and food court systems, ensuring scalability and reliability. Reduced technical debt through unit testing with JUnit and Mockito and managed data storage with MySQL and MongoDB.'
   },
   {
