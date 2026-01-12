@@ -7,12 +7,16 @@ export const devInfo: DevInfo = {
 - Java
 - TypeScript/JavaScript
 - Go
+- Ruby
 - Angular
+- React
 - SQL
 - Node.js
+- NestJS
 - Spring
+- Sinatra
 - Git
-- AWS Lambda
+- AWS ECS, RDS, S3, Secrets Manager, SQS
 - Willing to learn more!
 
 I have a professional level of English, I am a native Spanish speaker and I am currently working on improving my French language skills. 
