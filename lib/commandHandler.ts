@@ -36,7 +36,7 @@ function handleHelpCommand(): string {
 Available commands:
 - help: Show this help message
 - ls: List all projects
-- cat <project-name>: View details of a specific project
+- cat <slug>: View details of a specific project
 - about: View information about the developer
 - links: View social media links
 - experience: View professional experience
@@ -46,16 +46,25 @@ Available commands:
 
 function handleLsCommand(): string {
   const projects = getProjects()
-  return colorize(projects.map(p => p.slug).join('\n'), 'yellow', false)
+  return colorize(projects.map(p => `${p.slug.padEnd(40)} ${p.name}`).join('\n'), 'yellow', false)
 }
 
 async function handleCatCommand(args: string[]): Promise<string> {
-  if (args.length === 0) return colorize('Please specify a project name.', 'red', false)
+  if (args.length === 0) return colorize('Please specify a project slug. Type "ls" to see them.', 'red', false)
   const projectName = args.join(' ')
   const projectDetails = getProjectDetails(projectName)
   if (projectDetails) {
     const imageHtml = projectDetails.image ? `<img src="${projectDetails.image}" alt="${projectName} screenshot" style="max-width: 100%; height: auto; margin-bottom: 1rem;" />` : ''
-    return colorize(`${imageHtml}${projectDetails.content}`, 'green', false)
+    const techHtml = projectDetails.tech?.length
+      ? `<br /><br />Tech: ${projectDetails.tech.join(' · ')}`
+      : ''
+    const linksHtml = [
+      projectDetails.repo ? `<a href="${projectDetails.repo}" target="_blank" rel="noopener noreferrer" class="text-[#89b4fa] underline">Source: ${projectDetails.repo}</a>` : '',
+      projectDetails.demo ? `<a href="${projectDetails.demo}" target="_blank" rel="noopener noreferrer" class="text-[#a6e3a1] underline">Demo: ${projectDetails.demo}</a>` : '',
+      projectDetails.video ? `<a href="${projectDetails.video}" target="_blank" rel="noopener noreferrer" class="text-[#f9e2af] underline">Watch demo: ${projectDetails.video}</a>` : '',
+    ].filter(Boolean).join('<br />')
+    const linksBlock = linksHtml ? `<br /><br />${linksHtml}` : ''
+    return colorize(`${imageHtml}${projectDetails.content}${techHtml}${linksBlock}`, 'green', false)
   } else {
     return colorize(`Project "${projectName}" not found.`, 'red', false)
   }

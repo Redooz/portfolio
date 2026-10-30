@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ZeroVNC</title>
+  <desc id="desc">Terminal-style cover for ZeroVNC, an agent that operates API-less business apps over VNC.</desc>
+  <rect width="1200" height="630" fill="#1e1e2e"/>
+  <rect x="0.5" y="0.5" width="1199" height="629" rx="16" fill="none" stroke="#45475a"/>
+
+  <path d="M0 16a16 16 0 0 1 16-16h1168a16 16 0 0 1 16 16v48H0z" fill="#181825"/>
+  <circle cx="36" cy="32" r="7" fill="#f38ba8"/>
+  <circle cx="60" cy="32" r="7" fill="#f9e2af"/>
+  <circle cx="84" cy="32" r="7" fill="#a6e3a1"/>
+  <text x="112" y="39" fill="#a6adc8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19">zerovnc — screen-first agent</text>
+
+  <text x="70" y="184" fill="#a6e3a1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="86" font-weight="700">zerovnc</text>
+  <text x="72" y="232" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="29">An agent that uses apps the way a person does.</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21">
+    <rect x="70" y="280" width="440" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="313" fill="#89b4fa">1  observe_screen</text>
+    <rect x="70" y="346" width="440" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="379" fill="#cba6f7">2  ground_control</text>
+    <rect x="70" y="412" width="440" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="445" fill="#f9e2af">3  click_control</text>
+    <rect x="70" y="478" width="440" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="511" fill="#a6e3a1">4  verify_result</text>
+  </g>
+
+  <rect x="600" y="280" width="530" height="250" rx="12" fill="#11111b" stroke="#313244"/>
+  <path d="M600 292a12 12 0 0 1 12-12h506a12 12 0 0 1 12 12v32H600z" fill="#181825"/>
+  <text x="620" y="307" fill="#a6adc8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">Clínica Los Cerezos — patient record</text>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="15">
+    <rect x="620" y="342" width="490" height="34" rx="6" fill="#313244"/>
+    <text x="634" y="364" fill="#6c7086">Patient name</text>
+    <rect x="620" y="388" width="300" height="34" rx="6" fill="#313244"/>
+    <text x="634" y="410" fill="#6c7086">Phone</text>
+    <rect x="620" y="434" width="490" height="34" rx="6" fill="#313244"/>
+    <text x="634" y="456" fill="#6c7086">Notes</text>
+  </g>
+
+  <rect x="990" y="484" width="120" height="34" rx="7" fill="#a6e3a1"/>
+  <text x="1050" y="506" fill="#11111b" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Save</text>
+  <path d="M1064 468l26 38-13-3-7 12z" fill="#f9e2af" stroke="#11111b" stroke-width="2" stroke-linejoin="round"/>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="19">
+    <rect x="70" y="558" width="132" height="42" rx="21" fill="#313244"/>
+    <text x="136" y="585" fill="#cdd6f4" text-anchor="middle">VNC / RFB</text>
+    <rect x="214" y="558" width="152" height="42" rx="21" fill="#313244"/>
+    <text x="290" y="585" fill="#cdd6f4" text-anchor="middle">TypeScript</text>
+    <rect x="378" y="558" width="178" height="42" rx="21" fill="#313244"/>
+    <text x="467" y="585" fill="#cdd6f4" text-anchor="middle">guarded tools</text>
+  </g>
+  <text x="1130" y="585" fill="#6c7086" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" text-anchor="end">no API · no macros</text>
+</svg>

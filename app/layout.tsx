@@ -6,8 +6,8 @@ import { ReactNode } from "react";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Nicolas Olmos's Portfolio",
-  description: "Nicolas Olmos, fullstack developer's portfolio with a Linux terminal-inspired UI",
+  title: "Nicolás Olmos — Full-stack Developer",
+  description: "Nicolás Olmos, full-stack developer at Wompi. Payment infrastructure, fintech systems and AI agents, with a Linux terminal-inspired portfolio.",
 }
 
 export default function RootLayout({

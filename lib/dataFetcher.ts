@@ -5,6 +5,10 @@ import { professionalExperience, ProfessionalExperience } from "@/data/experienc
 export interface ProjectDetails {
   content: string;
   image?: string;
+  repo?: string;
+  demo?: string;
+  video?: string;
+  tech?: string[];
 }
 
 export interface DevInfo {
@@ -26,8 +30,8 @@ export function getProjectDetails(projectName: string): ProjectDetails | null {
   if (!project) {
     return null
   }
-  const { content, image } = project
-  return { content, image }
+  const { content, image, repo, demo, video, tech } = project
+  return { content, image, repo, demo, video, tech }
 }
 
 export function getDeveloperInfo(): DevInfo {

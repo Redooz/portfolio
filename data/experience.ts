@@ -7,9 +7,18 @@ export interface ProfessionalExperience {
 
 export const professionalExperience: ProfessionalExperience[] = [
   {
+    role: 'Full-stack Developer Ssr',
+    company: 'Wompi',
+    duration: '09/2026 - Present',
+    description: `*   Design and deliver full-stack features for payouts, open banking and POS transactions, supporting secure and compliant flows for 40,000+ merchants.
+*   Build high-performance backend services with Node.js, TypeScript, NestJS and Ruby, and ship web and mobile interfaces with Vue, React, React Native and Next.js.
+*   Run cloud-native workloads on AWS (EKS, SQS, DynamoDB, S3) with CI/CD pipelines and Infrastructure as Code.
+*   Participate in the design, implementation, documentation and testing of full-stack features alongside cross-functional teams in agile sprints.`
+  },
+  {
     role: 'Full-stack Developer',
     company: 'Wompi',
-    duration: '03/2025 - Present',
+    duration: '03/2025 - 09/2026',
     description: `*   Engineered complex financial features for payouts processing, open banking integrations, and POS transactions, ensuring secure and compliant data flow for over 40,000 merchants.
 *   Developed high-performance backend services utilizing Node.js, TypeScript, NestJS, and Ruby to deliver scalable solutions.
 *   Leveraged AI-driven development tools, including Cursor and Copilot, to optimize coding efficiency, accelerate feature delivery, and enhance code quality.
