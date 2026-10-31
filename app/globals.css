@@ -29,10 +29,141 @@
   --base: #1e1e2e;
   --mantle: #181825;
   --crust: #11111b;
+
+  --base-rgb: 30 30 46;
+  --mantle-rgb: 24 24 37;
+  --crust-rgb: 17 17 27;
+  --surface0-rgb: 49 50 68;
+  --surface1-rgb: 69 71 90;
+  --text-rgb: 205 214 244;
+  --subtext0-rgb: 166 173 200;
+  --overlay0-rgb: 108 112 134;
+  --overlay1-rgb: 127 132 156;
+  --blue-rgb: 137 180 250;
+  --mauve-rgb: 203 166 247;
+  --green-rgb: 166 227 161;
+  --yellow-rgb: 249 226 175;
+  --red-rgb: 243 139 168;
+  --teal-rgb: 148 226 213;
+  --lavender-rgb: 180 190 254;
+  --peach-rgb: 250 179 135;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
   background-color: var(--crust);
   color: var(--text);
+  min-height: 100vh;
 }
 
+::selection {
+  background-color: rgba(137, 180, 250, 0.3);
+  color: var(--text);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface1) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--surface1);
+  border-radius: 9999px;
+  border: 2px solid var(--crust);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--surface2);
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(205, 214, 244, 0.075) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
+
+  .bg-glow {
+    background-image:
+      radial-gradient(
+        640px circle at 12% -5%,
+        rgba(137, 180, 250, 0.12),
+        transparent 60%
+      ),
+      radial-gradient(
+        520px circle at 92% 8%,
+        rgba(203, 166, 247, 0.1),
+        transparent 60%
+      );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .prose-portfolio {
+    --tw-prose-body: var(--subtext0);
+    --tw-prose-headings: var(--text);
+    --tw-prose-lead: var(--text);
+    --tw-prose-links: var(--blue);
+    --tw-prose-bold: var(--text);
+    --tw-prose-counters: var(--overlay0);
+    --tw-prose-bullets: var(--surface2);
+    --tw-prose-hr: var(--surface1);
+    --tw-prose-quotes: var(--text);
+    --tw-prose-quote-borders: var(--mauve);
+    --tw-prose-captions: var(--overlay0);
+    --tw-prose-code: var(--text);
+    --tw-prose-pre-code: var(--text);
+    --tw-prose-pre-bg: var(--crust);
+    --tw-prose-th-borders: var(--surface1);
+    --tw-prose-td-borders: var(--surface1);
+  }
+
+  .prose-portfolio :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+
+  .prose-portfolio :where(ul):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    padding-left: 1.1em;
+  }
+
+  .prose-portfolio :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+
+  .prose-portfolio :where(h2):not(:where([class~="not-prose"] *)) {
+    font-family: var(--font-jetbrains), ui-monospace, monospace;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+}

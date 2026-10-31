@@ -1,4 +1,4 @@
-import { getProjects, getProjectDetails, getDeveloperInfo, getProfessionalExperience } from './dataFetcher'
+import { getProjects, getProjectDetails, getDeveloperInfo, getProfessionalExperience, getAwards } from './dataFetcher'
 import { colorize } from './colorizer'
 
 export async function handleCommand(command: string): Promise<string> {
@@ -23,6 +23,9 @@ export async function handleCommand(command: string): Promise<string> {
     case 'experience':
       return await handleExperienceCommand()
 
+    case 'awards':
+      return handleAwardsCommand()
+
     case 'clear':
       return handleClearCommand()
 
@@ -40,6 +43,7 @@ Available commands:
 - about: View information about the developer
 - links: View social media links
 - experience: View professional experience
+- awards: View awards and recognitions
 - clear: Clear the terminal
 `, 'blue', false)
 }
@@ -88,6 +92,16 @@ Company: ${exp.company}
 Duration: ${exp.duration}
 Description: ${exp.description}
 `).join('\n'), 'green', false)
+}
+
+function handleAwardsCommand(): string {
+  const awards = getAwards()
+  return colorize(awards.map(award => `
+${award.title}
+Issued by: ${award.issuer}${award.url ? ` (${award.url})` : ''}
+Date: ${award.date}
+${award.description}
+`).join('\n'), 'yellow', false)
 }
 
 function handleClearCommand(): string {
