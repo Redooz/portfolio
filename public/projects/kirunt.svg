@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">kirunt</title>
+  <desc id="desc">Terminal-style cover for kirunt, an agent bundle that delegates I/O-heavy work to a cheaper worker model.</desc>
+  <rect width="1200" height="630" fill="#1e1e2e"/>
+  <rect x="0.5" y="0.5" width="1199" height="629" rx="16" fill="none" stroke="#45475a"/>
+
+  <path d="M0 16a16 16 0 0 1 16-16h1168a16 16 0 0 1 16 16v48H0z" fill="#181825"/>
+  <circle cx="36" cy="32" r="7" fill="#f38ba8"/>
+  <circle cx="60" cy="32" r="7" fill="#f9e2af"/>
+  <circle cx="84" cy="32" r="7" fill="#a6e3a1"/>
+  <text x="112" y="39" fill="#a6adc8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19">kirunt — agent bundle</text>
+
+  <text x="70" y="184" fill="#cba6f7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="86" font-weight="700">kirunt</text>
+  <text x="72" y="232" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="29">Delegate the I/O. Keep the context.</text>
+
+  <rect x="70" y="278" width="1060" height="222" rx="12" fill="#11111b" stroke="#313244"/>
+  <text x="100" y="326" fill="#a6e3a1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24">$ kirunt delegate large-read</text>
+  <text x="100" y="372" fill="#89b4fa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24">→ worker model reads the file</text>
+  <text x="100" y="418" fill="#89b4fa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24">→ main context stays small</text>
+  <text x="100" y="464" fill="#f9e2af" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24">✓ tokens saved</text>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="20">
+    <rect x="70" y="544" width="122" height="44" rx="22" fill="#313244"/>
+    <text x="131" y="572" fill="#cdd6f4" text-anchor="middle">hooks</text>
+    <rect x="204" y="544" width="124" height="44" rx="22" fill="#313244"/>
+    <text x="266" y="572" fill="#cdd6f4" text-anchor="middle">scripts</text>
+    <rect x="340" y="544" width="108" height="44" rx="22" fill="#313244"/>
+    <text x="394" y="572" fill="#cdd6f4" text-anchor="middle">skills</text>
+  </g>
+  <text x="1130" y="572" fill="#6c7086" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" text-anchor="end">Kiro CLI · MCP · LLM</text>
+</svg>
