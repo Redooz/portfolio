@@ -24,20 +24,22 @@ export const projects: Project[] = [
     repo: "https://github.com/Redooz/zerovnc",
     video:
       "https://raw.githubusercontent.com/Redooz/zerovnc/main/docs/demos/demo-update-patient.gif",
-    tech: ["TypeScript", "Bun", "VNC/RFB", "Hexagonal", "OpenRouter"],
+    tech: ["TypeScript", "Bun", "VNC/RFB", "Hexagonal", "OpenRouter", "Evals"],
     content: `# ZeroVNC
 An agent that operates API-less business apps the way a new employee would: it looks at the screen over VNC/RFB, figures out where things are, does the task, and checks the result. No per-app setup, no recorded macros, no API access — only what is visible on screen.
 
 - Takes a task in natural language: create or update records, answer filtered counting questions, run exports.
 - A perception model turns each capture into controls, labels, values, bounding boxes and disabled states; a separate decision model answers narrow grounding questions ("which button saves this?") and abstains when unsure.
 - Acts only through guarded application tools (observe_screen, click_control, select_record, replace_field, scroll_screen, press_key, verify_result). Code — not the model — enforces frame freshness, unambiguous targets, disabled controls and the task deadline.
-- Reports success only from verified on-screen evidence, refuses ambiguous or impossible tasks, and makes only the requested changes.
+- Evaluation-first loop: success comes only from verified on-screen evidence, the agent refuses ambiguous or impossible tasks, and it makes only the requested changes.
+- Measured with a decision benchmark at 95–100% accuracy across labelled grounding cases with zero wrong groundings, 3/3 disabled-control recall and zero false flags, plus ~400 deterministic offline tests that make no paid model calls.
 - In the demo, it updates a patient record in Clínica Los Cerezos, an app it had never seen, in 1 min 46 s.
 
 ## How It Is Built
 - Bun + TypeScript in strict hexagonal layers: domain, application, adapters and bootstrap. Domain and application code import no adapter types.
 - A custom RFB/VNC client with bounded shutdown and deadline-capped release.
 - One loop, one source of truth: models propose targets, tools dispose, and only the loop sets done or failed — always from current verification evidence.
+- The evals/ suite includes an end-to-end runner, graders for app state, answers, failure reasons and secrets, and component benchmarks with development and held-out labelled cases.
 
 ## Technologies Used
 - TypeScript / Bun
@@ -55,7 +57,7 @@ An agent that operates API-less business apps the way a new employee would: it l
     categories: ["AI & Agents"],
     image: "/projects/kirunt.svg",
     repo: "https://github.com/Redooz/kirunt",
-    tech: ["Shell", "Kiro CLI", "MCP", "LLM agents"],
+    tech: ["Shell", "Kiro CLI", "MCP", "LLM agents", "Evals"],
     content: `# kirunt
 An agent bundle that delegates I/O-heavy work — large file reads, boilerplate generation and MCP tool calls — to a cheaper worker model, saving tokens on all three.
 
@@ -64,6 +66,8 @@ An agent bundle that delegates I/O-heavy work — large file reads, boilerplate 
 - Keeps the main agent's context light by exposing only the read, write, shell and web tool groups. Large reads and MCP responses stay in worker sessions and never enter the main context.
 - Installs agent profiles under ~/.kiro/agents/, so both the Kiro IDE and CLI can load them.
 - Handles both Kiro CLI V2 and V3 payloads, and keeps model names configurable instead of hardcoding them in scripts.
+- Evaluated with 79 offline cases covering hook routing, transport and MCP delegation, six end-to-end behavior scenarios, and live benchmark runs.
+- Measured 97% token savings across five benchmark scenarios — 98% on single large files and multi-file reads — using conservative chars/4 estimates.
 
 ## Technologies Used
 - Shell
