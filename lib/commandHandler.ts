@@ -294,6 +294,7 @@ function neofetchText(): string {
   const linkedin = devInfo.info.find((link) => link.platform === 'linkedin')?.url
   const languages = devInfo.skillGroups.find((group) => group.label === 'Languages')
   const stack = languages?.items.slice(0, 6).join(', ') ?? ''
+  const evals = devInfo.skillGroups.find((group) => group.label === 'AI & Evals')
 
   return [
     `${devInfo.handle.split('-')[0]}@portfolio`,
@@ -303,6 +304,7 @@ function neofetchText(): string {
     `Location   ${devInfo.location}`,
     `Languages  ${devInfo.languages.map((language) => `${language.name} (${language.level})`).join(', ')}`,
     `Stack      ${stack}`,
+    `Evals      ${evals?.items.slice(0, 4).join(', ') ?? 'n/a'}`,
     `GitHub     ${github ?? 'n/a'}`,
     `LinkedIn   ${linkedin ?? 'n/a'}`,
   ].join('\n')

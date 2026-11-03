@@ -14,13 +14,21 @@ export function AboutSection({ devInfo }: { devInfo: DevInfo }) {
         {devInfo.skillGroups.map((group, index) => (
           <div
             key={group.label}
-            className="rounded-xl border border-line/50 bg-base/40 p-4 transition-colors hover:border-line"
+            className={`rounded-xl border p-4 transition-colors ${
+              group.label === 'AI & Evals'
+                ? 'border-mauve/40 bg-mauve/[0.06] hover:border-mauve/60 sm:col-span-2'
+                : 'border-line/50 bg-base/40 hover:border-line'
+            }`}
           >
             <div className="flex items-center gap-2">
               <span className="font-mono text-[10px] text-faint">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 className="font-mono text-[11px] uppercase tracking-widest text-blue">
+              <h3
+                className={`font-mono text-[11px] uppercase tracking-widest ${
+                  group.label === 'AI & Evals' ? 'text-mauve' : 'text-blue'
+                }`}
+              >
                 {group.label}
               </h3>
             </div>
