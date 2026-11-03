@@ -64,7 +64,7 @@ export default function Home() {
           >
             {mode === 'terminal' ? (
               <div className="mx-auto max-w-4xl">
-                <Terminal />
+                <Terminal onExit={() => changeMode('text')} />
               </div>
             ) : (
               <SimplePortfolio />

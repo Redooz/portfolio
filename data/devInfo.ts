@@ -1,7 +1,7 @@
 import { DevInfo } from "@/lib/dataFetcher";
 
 const bio = [
-  "Hi! I'm Nicolás, a full-stack developer based in Bogotá, Colombia. I build payment infrastructure at Wompi, one of Colombia's leading fintech platforms, where I work on payouts, open banking and POS transactions used by more than 40,000 merchants.",
+  "Hi! I'm Nicolás, a full-stack developer based in Bogotá, Colombia. I build payment infrastructure at Wompi, one of Colombia's leading fintech platforms, where I work on payouts, open banking and POS transactions used by more than 40,000 merchants. I also build AI-assisted developer tools that bring context-aware task execution and automated workflows into the engineering workflow.",
   "My day-to-day is TypeScript, Node.js, NestJS and Ruby on the backend, with React, React Native, Next.js and Vue on the frontend, running on AWS (EKS, SQS, DynamoDB, S3). I care about clean architecture — hexagonal boundaries, SOLID principles, and tests that let teams move quickly.",
   "Outside of work I build AI agents and developer tooling: a VNC-driven agent that operates apps with no API, an agent bundle that cuts LLM token usage, and MCP servers that connect assistants to real tools.",
   "I was honored with a Platzi Scholarship during the 'Future Global Technologists' program and recognized as a Digital Academy Ambassador for Colombia by Blanc Labs, which reflects how much I value continuous learning and sharing what I learn.",
@@ -59,7 +59,7 @@ export const devInfo: DevInfo = {
     company: "Wompi",
     location: "Bogotá, Colombia",
     availability: "Open to opportunities",
-    pitch: "I build payment infrastructure at Wompi and AI agents on the side.",
+    pitch: "I build payment infrastructure and AI developer tools at Wompi, plus AI agents on the side.",
     info: [
         {
             platform: 'github',

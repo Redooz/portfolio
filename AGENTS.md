@@ -8,17 +8,18 @@
 
 ## Architecture
 
-- Single-page App Router app. `app/page.tsx` is a client component that toggles between `SimplePortfolio` (default) and `Terminal` via `ToggleButton`.
+- Single-page App Router app. `app/page.tsx` is a client component that toggles between `SimplePortfolio` (default) and `Terminal` via `ModeToggle`.
 - All content is static TypeScript in `data/`; `lib/dataFetcher.ts` is the access layer. There are no API routes, server actions, CMS, or runtime data fetches.
-- Edit portfolio content in `data/projects.ts`, `data/experience.ts`, and `data/devInfo.ts`.
+- Edit portfolio content in `data/projects.ts`, `data/experience.ts`, `data/awards.ts`, and `data/devInfo.ts`.
 
 ## Terminal quirks
 
-- Commands live in `lib/commandHandler.ts`; `handleCommand()` returns an HTML string.
-- `components/Terminal.tsx` renders output with `dangerouslySetInnerHTML`. Wrap output with `colorize()` and escape user-controlled text before returning it.
-- `cat <slug>` matches the project `slug` (case-insensitive), not its `name`; `ls` lists slugs.
-- `colorize()` only recognizes `red`, `green`, `blue`, `yellow`, and `lavender`; unknown colors render unstyled.
-- Terminal output is not Markdown. `SimplePortfolio` renders project content with `react-markdown` and Tailwind Typography, but terminal `cat`/`experience` show raw text/markup.
+- Commands live in `lib/commandHandler.ts`; `executeCommand()` returns structured results (`text`, `markdown`, `clear`, `exit`). Add commands to the `commands` registry and keep `help` and completion metadata in sync.
+- `components/Terminal.tsx` renders entries with React and ReactMarkdown; do not reintroduce `dangerouslySetInnerHTML`.
+- Completion and fuzzy matching live in `lib/terminal/completion.ts` and `lib/terminal/fuzzy.ts`; command history is persisted to localStorage under `portfolio.terminal.history.v1` by `lib/terminal/storage.ts`.
+- `cat <slug|name>` matches a project slug or name (case-insensitive, exact/prefix/includes); `ls` lists slugs.
+- Terminal output is Markdown. `cat`, `about`, `experience`, `awards`, `contact`, and `open` return Markdown; `help`, `ls`, `history`, `neofetch`, `date`, `pwd`, and `echo` return preformatted text.
+- Terminal shortcuts: Tab/Shift+Tab completion cycling, ↑/↓ history, Ctrl+L or Ctrl+Shift+L clear, Ctrl+C cancel, Ctrl+U clear line, Ctrl+W delete word. Ctrl+L is browser-reserved in some browsers, so keep the clear button and Ctrl+Shift+L fallback.
 
 ## Gotchas
 

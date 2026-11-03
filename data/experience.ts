@@ -13,9 +13,10 @@ export const professionalExperience: ProfessionalExperience[] = [
     company: 'Wompi',
     duration: '09/2026 - Present',
     current: true,
-    highlights: ['40k+ merchants', 'Payouts', 'Open banking', 'POS'],
+    highlights: ['40k+ merchants', 'Payouts', 'Open banking', 'POS', 'AI dev tools'],
     description: `*   Design and deliver full-stack features for payouts, open banking and POS transactions, supporting secure and compliant flows for 40,000+ merchants.
 *   Build high-performance backend services with Node.js, TypeScript, NestJS and Ruby, and ship web and mobile interfaces with Vue, React, React Native and Next.js.
+*   Build AI-assisted developer tools that embed context-aware task execution and automated workflows into the engineering workflow.
 *   Run cloud-native workloads on AWS (EKS, SQS, DynamoDB, S3) with CI/CD pipelines and Infrastructure as Code.
 *   Participate in the design, implementation, documentation and testing of full-stack features alongside cross-functional teams in agile sprints.`
   },
