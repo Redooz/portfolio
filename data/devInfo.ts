@@ -37,7 +37,7 @@ const skillGroups = [
 const languages = [
   { name: "Spanish", level: "Native" },
   { name: "English", level: "Professional" },
-  { name: "French", level: "Learning" },
+  { name: "French", level: "Intermediate" },
 ];
 
 const content = [
