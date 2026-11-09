@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">role-playing</title>
+  <desc id="desc">Terminal-style cover for role-playing, an open-source multi-agent voice role-play platform where every behaviour change is gated by evals.</desc>
+  <rect width="1200" height="630" fill="#1e1e2e"/>
+  <rect x="0.5" y="0.5" width="1199" height="629" rx="16" fill="none" stroke="#45475a"/>
+
+  <path d="M0 16a16 16 0 0 1 16-16h1168a16 16 0 0 1 16 16v48H0z" fill="#181825"/>
+  <circle cx="36" cy="32" r="7" fill="#f38ba8"/>
+  <circle cx="60" cy="32" r="7" fill="#f9e2af"/>
+  <circle cx="84" cy="32" r="7" fill="#a6e3a1"/>
+  <text x="112" y="39" fill="#a6adc8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19">role-playing — voice agents, evaluated</text>
+
+  <text x="70" y="184" fill="#cba6f7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="78" font-weight="700">role-playing</text>
+  <text x="72" y="232" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="29">Several AI personas. One learner. Every change gated by evals.</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21">
+    <rect x="70" y="278" width="170" height="58" rx="10" fill="#313244"/>
+    <text x="155" y="314" fill="#89b4fa" text-anchor="middle">STT</text>
+    <path d="M252 307h34" stroke="#6c7086" stroke-width="2"/>
+    <path d="M286 300l10 7-10 7" fill="#6c7086"/>
+    <rect x="300" y="278" width="170" height="58" rx="10" fill="#313244"/>
+    <text x="385" y="314" fill="#cba6f7" text-anchor="middle">LLM</text>
+    <path d="M482 307h34" stroke="#6c7086" stroke-width="2"/>
+    <path d="M516 300l10 7-10 7" fill="#6c7086"/>
+    <rect x="530" y="278" width="170" height="58" rx="10" fill="#313244"/>
+    <text x="615" y="314" fill="#a6e3a1" text-anchor="middle">TTS</text>
+
+    <rect x="70" y="360" width="250" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="393" fill="#f9e2af">1  turn.granted</text>
+    <rect x="70" y="426" width="250" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="459" fill="#89b4fa">2  persona.response</text>
+    <rect x="70" y="492" width="250" height="52" rx="10" fill="#313244"/>
+    <text x="92" y="525" fill="#a6e3a1">3  grade + pass^k</text>
+  </g>
+
+  <rect x="380" y="360" width="750" height="184" rx="12" fill="#11111b" stroke="#313244"/>
+  <path d="M380 372a12 12 0 0 1 12-12h726a12 12 0 0 1 12 12v32H380z" fill="#181825"/>
+  <text x="400" y="387" fill="#a6adc8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">session — workplace English / French</text>
+
+  <rect x="940" y="368" width="168" height="22" rx="6" fill="#a6e3a1"/>
+  <text x="1024" y="384" fill="#11111b" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">gate passed</text>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="15">
+    <rect x="402" y="406" width="706" height="38" rx="7" fill="#313244"/>
+    <text x="418" y="430" fill="#89b4fa">manager</text>
+    <text x="500" y="430" fill="#cdd6f4">Could we move Thursday's review to Friday?</text>
+
+    <rect x="402" y="452" width="706" height="38" rx="7" fill="#313244"/>
+    <text x="418" y="476" fill="#f9e2af">you</text>
+    <text x="500" y="476" fill="#cdd6f4">Friday works, but I need the figures by Thursday noon.</text>
+
+    <rect x="402" y="498" width="706" height="38" rx="7" fill="#313244"/>
+    <text x="418" y="522" fill="#cba6f7">peer</text>
+    <text x="500" y="522" fill="#cdd6f4">I can own the figures. Want me to send a draft first?</text>
+  </g>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="19">
+    <rect x="70" y="558" width="150" height="42" rx="21" fill="#313244"/>
+    <text x="145" y="585" fill="#cdd6f4" text-anchor="middle">TypeScript</text>
+    <rect x="232" y="558" width="150" height="42" rx="21" fill="#313244"/>
+    <text x="307" y="585" fill="#cdd6f4" text-anchor="middle">LiveKit</text>
+    <rect x="394" y="558" width="190" height="42" rx="21" fill="#313244"/>
+    <text x="489" y="585" fill="#cdd6f4" text-anchor="middle">multi-agent</text>
+    <rect x="596" y="558" width="178" height="42" rx="21" fill="#313244"/>
+    <text x="685" y="585" fill="#cdd6f4" text-anchor="middle">Langfuse</text>
+  </g>
+  <text x="1130" y="585" fill="#6c7086" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" text-anchor="end">open source · text first</text>
+</svg>

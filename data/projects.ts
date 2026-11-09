@@ -14,6 +14,35 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: "role-playing",
+    slug: "role-playing",
+    summary:
+      "An open-source, work-in-progress voice role-play platform where several AI personas talk with one learner — and every behaviour change is gated by evals.",
+    categories: ["AI & Agents", "Full-stack"],
+    featured: true,
+    image: "/projects/role-playing.svg",
+    repo: "https://github.com/Redooz/role-playing",
+    tech: ["TypeScript", "Node.js", "LiveKit", "OpenRouter", "Langfuse", "Evals"],
+    content: `# role-playing
+An open-source, work-in-progress platform for practising workplace English and French with several AI personas in one real-time conversation. The distinctive part is the process: every change that affects behaviour has to pass capability and regression evals before it is accepted.
+
+- Status: work in progress. M0–M2 are complete: the eval foundation, single-agent text sessions, and versioned personas and scenarios with \`en\`, \`en-GB\`, \`fr\` and \`fr-CA\` variants.
+- The eval harness models tasks, trials and rounds. Capability evals must show a real improvement; regression evals hold the baseline; \`pass^k\` reporting and a model-based grader stop a change from passing by luck.
+- A self-hosted Langfuse review layer displays trial traces, per-axis scores and experiment comparisons, while the harness still replays, grades and decides.
+- Voice-first design: a cascaded STT → LLM → TTS pipeline where each stage leaves a text checkpoint for evaluation. Streaming transcription carries calibrated confidence and uncertainty gates, so an uncertain transcript never becomes learner feedback. Text sessions ship first; the LiveKit audio path is gated behind the same evals.
+- The multi-agent layer is specified around persona judgments with deterministic turn arbitration: at most one grant holder, bounded interjections, immediate user barge-in, and late chunks from revoked grants discarded.
+- TypeScript on Node 26 with npm workspaces and Vitest, plus OpenRouter and Groq for generation and grading. Mutation coverage is held at ~95%.
+
+## Technologies Used
+- TypeScript / Node.js
+- LiveKit
+- OpenRouter / Groq
+- Langfuse
+- Vitest
+- Evaluation harnesses and \`pass^k\`
+`,
+  },
+  {
     name: "ZeroVNC",
     slug: "zerovnc",
     summary:
